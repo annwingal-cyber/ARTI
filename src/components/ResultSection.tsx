@@ -6,6 +6,7 @@
 import { motion } from "motion/react";
 import { TasteAnalysis } from "../services/aiService";
 import { Share2, RotateCcw, Paintbrush, Sparkles } from "lucide-react";
+import { ArchetypeIllustration } from "./ArchetypeIllustration";
 
 interface ResultSectionProps {
   analysis: TasteAnalysis;
@@ -39,6 +40,8 @@ export default function ResultSection({ analysis, onReset }: ResultSectionProps)
         <span className="text-xs uppercase tracking-[0.3em] font-semibold text-olive/60">审美档案</span>
         <h1 className="text-5xl md:text-6xl font-bold italic text-ink">{analysis.personaTitle}</h1>
       </header>
+
+      <ArchetypeIllustration type={analysis.archetype} />
 
       <div className="bg-white p-8 rounded-[40px] shadow-2xl relative overflow-hidden">
         <div className="absolute -top-10 -right-10 opacity-5">
